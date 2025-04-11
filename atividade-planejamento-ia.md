@@ -259,11 +259,10 @@ Final = [
 
 /*
 Alunos: 
-Ana Letícia dos Santos Souza
-Fernanda de Oliveira da Costa
-Stanley de Carvalho Monteiro
-Jhonatas Costa Oliveira
-Ícaro Costa Moreira
+Ana Letícia dos Santos Souza,
+Fernanda de Oliveira da Costa,
+Stanley de Carvalho Monteiro,
+Jhonatas Costa Oliveira,
+Ícaro Costa Moreira,
 Giulia Lima Duarte
-
 */
