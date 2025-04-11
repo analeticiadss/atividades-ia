@@ -236,7 +236,7 @@ replace([H|T], Pos, X, [H|NewT]) :-
     Pos > 1,
     NextPos is Pos - 1,
     replace(T, NextPos, X, NewT).
-
+```
 
 ------------------
 % para testar:
@@ -256,4 +256,14 @@ Final = [
    plan(Final, Initial, Plan).
 */
 
-```
+
+/*
+Alunos: 
+Ana Letícia dos Santos Souza
+Fernanda de Oliveira da Costa
+Stanley de Carvalho Monteiro
+Jhonatas Costa Oliveira
+Ícaro Costa Moreira
+Giulia Lima Duarte
+
+*/
