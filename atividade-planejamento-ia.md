@@ -239,8 +239,7 @@ replace([H|T], Pos, X, [H|NewT]) :-
 ```
 
 ------------------
-% para testar:
-/*
+para testar:
 Final = [
      [1, 2, 3, 4],
      [3, 4, 1, 2],
@@ -254,15 +253,13 @@ Final = [
      [0, 0, 0, 0]
    ],
    plan(Final, Initial, Plan).
-*/
 
 
-/*
 Alunos: 
 Ana Letícia dos Santos Souza,
 Fernanda de Oliveira da Costa,
 Stanley de Carvalho Monteiro,
 Jhonatas Costa Oliveira,
 Ícaro Costa Moreira,
-Giulia Lima Duarte
-*/
+Giulia Lima Duarte.
+
