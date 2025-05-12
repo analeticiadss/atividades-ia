@@ -1,4 +1,4 @@
-****** SOLUÇÃO 2. s_inicial=i2 ate o estado s_final=i2 (a). ******
+% ****** SOLUÇÃO 2. s_inicial=i2 ate o estado s_final=i2 (a). ******
 
 :- use_module(library(clpfd)).
 
@@ -50,7 +50,7 @@ numerar_passos([mover(B, De, Para, Base)|Resto], N) :-
 
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-PARA TESTAR:
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% PARA TESTAR:
 
-mostrar_plano.
+% mostrar_plano.
