@@ -1,0 +1,56 @@
+****** SOLUÇÃO 2. s_inicial=i2 ate o estado s_final=i2 (a). ******
+
+:- use_module(library(clpfd)).
+
+% Fatos sobre os blocos
+bloco(a, 1). % tamanho 1
+bloco(b, 1). % tamanho 1
+bloco(c, 2). % tamanho 2
+bloco(d, 3). % tamanho 3
+
+% Estado inicial
+estado_inicial([
+    pos(a,1,c),  % a na pos 1 sobre c
+    pos(c,1,2),  % c ocupa pos 1-2
+    pos(d,3,5),  % d ocupa pos 3-5
+    pos(b,6,chao) % b na pos 6 no chão
+]).
+
+% Estado final desejado
+estado_final([
+    pos(d,4,6),  % d ocupa pos 4-6
+    pos(a,5,d),  % a na pos 5 sobre d
+    pos(b,6,d),  % b na pos 6 sobre d
+    pos(c,5,6)   % c ocupa pos 5-6 sobre a e b
+]).
+
+% Plano de ações específico conforme discutido
+plano_especifico(Plano) :-
+    Plano = [
+        mover(b, 6, 2, c),   % 1. Mover b para cima de c
+        mover(d, 3, 4, chao), % 2. Mover d para 4-6
+        mover(a, 1, 5, d),    % 3. Mover a para cima de d
+        mover(b, 2, 6, d),    % 4. Mover b para cima de d
+        mover(c, 1, 5, a)     % 5. Mover c para cima de a e b
+    ].
+
+% Predicado principal para mostrar o plano
+mostrar_plano :-
+    plano_especifico(Plano),
+    writeln('Plano de ações para atingir o estado final:'),
+    writeln(''),
+    numerar_passos(Plano, 1).
+
+numerar_passos([], _).
+numerar_passos([mover(B, De, Para, Base)|Resto], N) :-
+    format('~d. Mover bloco ~w da posição ~w para ~w em cima de ~w~n', [N, B, De, Para, Base]),
+    N1 is N + 1,
+    numerar_passos(Resto, N1).
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PARA TESTAR:
+
+mostrar_plano.
